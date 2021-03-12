@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  width: 95%;
+  width: 96%;
 }
 
 .landing-page {
@@ -29,9 +29,8 @@ main {
   height: 1.5rem;
   font-size: 0.6rem;
   background-color: rgba(0, 27, 41, 0.9);
-  text-align: center;
-  padding-top: 7px;
   color: #F1F1F1;
+  text-align: center;
 }
 
 .burger-section {
@@ -64,6 +63,7 @@ main {
           justify-content: space-between;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.63)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.63) 0%, rgba(0, 0, 0, 0) 100%);
+  overflow: hidden;
 }
 
 .logo {
@@ -75,8 +75,12 @@ main {
 
 .list-nav {
   position: absolute;
-  left: 60%;
-  width: 40%;
+  right: 50px;
+  width: 36%;
+  height: 50px;
+  line-height: 2.8rem;
+  font-size: 19px;
+  font-weight: 400;
 }
 
 .list-nav ul {
@@ -89,16 +93,77 @@ main {
 }
 
 .list-nav li {
-  margin: 15px;
+  height: 100%;
+  padding: 0 15px;
   cursor: pointer;
+  font-family: 'Yanone Kaffeesatz', sans-serif !important;
 }
 
-/* 
+.list-nav li:hover {
+  border-bottom: 1px solid;
+}
 
+.list-nav li:nth-child(2), .list-nav li:nth-child(5) {
+  border-bottom: none;
+}
 
-*/
+.list-nav li i {
+  margin: 10px;
+}
+
+.subnav-content {
+  display: none;
+  background-color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 2s all;
+  transition: 2s all;
+}
+
+.subnav-content a {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding-left: 10px;
+  border-bottom: 1px solid #F1F1F1;
+  font-family: 'Yanone Kaffeesatz', sans-serif !important;
+  font-size: 19px;
+  font-weight: 400;
+  color: black;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.subnav-content a:hover {
+  background-color: #19313E;
+  color: white;
+}
+
+.subnav-content a:link,
+.subnav-content a:visited,
+.subnav-content a:hover,
+.subnav-content a:active {
+  text-decoration: none;
+}
+
+li:nth-child(2):hover .subnav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: none;
+}
+
+li:nth-child(5):hover .subnav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+}
+
 .bottom-line {
-  width: 95%;
+  width: 96%;
   height: 120px;
   background-color: rgba(0, 27, 41, 0.7);
   color: seashell;
@@ -127,19 +192,59 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
   width: 50px;
   height: 50px;
   padding: 13px;
   border-radius: 50%;
   border: 1px solid white;
   cursor: pointer;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .down-arrow i {
   color: white;
   font-size: 1.6rem;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 20px;
+  }
+  25% {
+    top: 25px;
+  }
+  50% {
+    top: 35px;
+  }
+  75% {
+    top: 25px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 20px;
+  }
+  25% {
+    top: 25px;
+  }
+  50% {
+    top: 35px;
+  }
+  75% {
+    top: 25px;
+  }
+  100% {
+    top: 20px;
+  }
 }
 
 .btn-book-now {
@@ -163,12 +268,12 @@ main {
 }
 
 .vertical-nav {
-  width: 5%;
+  width: 4%;
   height: 100vh;
   position: fixed;
   top: 0px;
   right: 0px;
-  background-color: #fff;
+  background-color: #FFF;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,5 +319,11 @@ main {
   width: 100%;
   height: 100vh;
   background-color: khaki;
+}
+
+@media screen and (max-width: 1460px) {
+  .list-nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
