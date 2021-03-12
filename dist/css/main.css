@@ -1,5 +1,218 @@
 * {
   margin: 0px;
   padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  height: auto;
+}
+
+main {
+  width: 95%;
+}
+
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  background: url(/images/piazza-anfiteatro.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.covid {
+  width: 100%;
+  height: 1.5rem;
+  font-size: 0.6rem;
+  background-color: rgba(0, 27, 41, 0.9);
+  text-align: center;
+  padding-top: 7px;
+  color: #F1F1F1;
+}
+
+.burger-section {
+  width: 170px;
+  height: 50px;
+  font-size: 19px;
+  font-weight: 400;
+  background-color: rgba(0, 27, 41, 0.7);
+  color: white;
+  text-align: center;
+}
+
+.fa-bars {
+  z-index: 50;
+  margin: 10px;
+}
+
+.primary {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.63)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.63) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.logo {
+  max-width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 42%;
+}
+
+.list-nav {
+  position: absolute;
+  left: 60%;
+  width: 40%;
+}
+
+.list-nav ul {
+  color: white;
+  list-style: none;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list-nav li {
+  margin: 15px;
+  cursor: pointer;
+}
+
+/* 
+
+
+*/
+.bottom-line {
+  width: 95%;
+  height: 120px;
+  background-color: rgba(0, 27, 41, 0.7);
+  color: seashell;
+  position: absolute;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.left-title {
+  margin: auto 50px;
+}
+
+.left-title h2 {
+  font-family: 'Ovo', serif;
+  font-size: 23px !important;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+}
+
+.down-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 50px;
+  height: 50px;
+  padding: 13px;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.down-arrow i {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.btn-book-now {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 20px 30px 20px 30px;
+  margin-right: 50px;
+  background-color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+.btn-book-now:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.vertical-nav {
+  width: 5%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background-color: #fff;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.languages {
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 0.6rem;
+  cursor: pointer;
+}
+
+.book-now-vertical {
+  width: auto;
+  padding: 15px;
+}
+
+.vertical {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.prova {
+  width: 100%;
+  height: 100vh;
+  background-color: khaki;
 }
 /*# sourceMappingURL=main.css.map */
