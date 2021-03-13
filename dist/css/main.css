@@ -6,29 +6,44 @@
   font-family: 'Raleway', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: auto;
+  background-color: #f2f2f2;
 }
 
 main {
   width: 96%;
+  -webkit-perspective: 6000px;
+          perspective: 6000px;
 }
 
 .landing-page {
   width: 100%;
   height: 100vh;
-  background: url(/images/piazza-anfiteatro.jpg);
+  position: relative;
+  background: url(/images/piazza-anfiteatro-min.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   z-index: 1;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.animation {
+  -webkit-transform: rotateY(-35deg);
+          transform: rotateY(-35deg);
 }
 
 .covid {
   width: 100%;
   height: 1.5rem;
   font-size: 0.6rem;
-  background-color: rgba(0, 27, 41, 0.9);
+  background-color: #19313E;
   color: #F1F1F1;
   text-align: center;
 }
@@ -41,6 +56,7 @@ main {
   background-color: rgba(0, 27, 41, 0.7);
   color: white;
   text-align: center;
+  cursor: pointer;
 }
 
 .fa-bars {
@@ -70,7 +86,7 @@ main {
   max-width: 100%;
   position: absolute;
   top: 30px;
-  left: 42%;
+  left: 45%;
 }
 
 .list-nav {
@@ -162,8 +178,39 @@ li:nth-child(5):hover .subnav-content {
   border: none;
 }
 
-.bottom-line {
+.left-hidden-nav {
+  width: 300px;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  top: 0px;
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+  -webkit-transition-duration: .8s;
+          transition-duration: .8s;
+  z-index: 3;
+}
+
+.hide-nav {
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+}
+
+.cover {
   width: 96%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.hide-cover {
+  display: none;
+}
+
+.bottom-line {
+  width: 100%;
   height: 120px;
   background-color: rgba(0, 27, 41, 0.7);
   color: seashell;

@@ -20,7 +20,7 @@ crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- VERTICAL NAV BAR -->
+    <!-- VERTICAL NAV NAV -->
     <nav aria-label="book-now-nav" class="vertical-nav">
         <div class="languages">
             <span>Italiano</span>
@@ -29,6 +29,42 @@ crossorigin="anonymous">
         </div>
         <div class="book-now-vertical"><span class="vertical"> Prenota Subito </span></div>
     </nav>
+    <!--LEFT HIDDEN NAV-->
+    <div class="cover hide-cover"></div>
+
+    <nav class="left-hidden-nav hide-nav" aria-label="secondary">
+        <div class="left-nav-log">
+            <img src="/images/logo-grigio.png" width="166" height="106" alt="logo">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="left-nav-list">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Il Palazzo</a></li>
+                <li><a href="#">Camere & Suite</a></li>
+                <li><a href="#">Servizi</a></li>
+                <li><a href="#">Posizione</a></li>
+                <li><a href="#">Eat & Drink</a></li>
+                <li><a href="#">Esperienze</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Offerte</a></li>
+                <li><a href="#">Parcheggio</a></li>
+                <li><a href="#">Meeting & Eventi</a></li>
+                <li><a href="#">Contatti</a></li>
+            </ul>
+            <div class="left-nav-contact">
+                <p><i class="fas fa-map-marker-alt"></i>Piazza piazza, 99, 00000, Italia (IT)</p>
+<p><i class="fas fa-phone"></i> +99 0000 101010</p>
+<p><i class="fas fa-envelope"></i><a href = "mailto: abc@example.com">info@hotel.it</a></p>
+            </div>
+            <div class="left-nav-social">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-tripadvisor"></i>
+            </div>
+        </div>
+    </nav>
+   
 
     <!-- MAIN   -->
 
@@ -69,8 +105,12 @@ crossorigin="anonymous">
 </div>
 </nav>
 <div class="logo">
-    <img src="/images/logo-bianco.png" alt="logo">
+    <img src="/images/logo-bianco.png" width="166" height="106" alt="logo">
 </div>
+
+
+
+</nav>
 
 <!-- BOTTOM LINE  -->
 <div class="bottom-line">
@@ -78,19 +118,19 @@ crossorigin="anonymous">
         <h2>Palazzo Dipinto</h2>
         <h2>Tradizione e design</h2>
     </div>
-    <div class="down-arrow"><i class="fas fa-arrow-down"></i></div>
+    <div class="down-arrow"><a href="#daVedere"><i class="fas fa-arrow-down"></i></a></div>
     <div class="btn-container">
         <button type="button" class="btn-book-now">Book Now</button>
     </div>
 </div>
 </section>
 
-<section class="prova"></section>
+<section class="prova" id="daVedere"></section>
 </main>
 
 
 
 
-    
+<script src="app.js"></script>
 </body>
 </html>
