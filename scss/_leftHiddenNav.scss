@@ -1,0 +1,111 @@
+//LEFT HIDDEN NAV ===================================================
+
+.left-hidden-nav {
+    width: 300px;
+    height: 100vh;
+    background:white;
+    position: fixed;
+    padding-left: 60px;
+    top: 0px;
+    transition-delay: .4s;
+    transition-duration: .8s;
+    z-index: 3;
+}
+.hide-nav {
+
+    transform: translateX( -300px);
+}
+.cover {
+    width: 96%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.hide-cover {
+    display: none;
+}
+
+.left-nav-logo {
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+   
+}
+.fa-times {
+    position: absolute;
+    right: 5px;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.left-nav-list {
+    
+    
+    
+    ul {
+        list-style: none;
+        margin-bottom: 30px;
+    }
+    li{
+        padding: 5px 0;
+        cursor: pointer;
+
+        a{
+           color: black;
+           font-weight: 500;
+           font-size: 0.9rem;
+        }
+    }
+    li:hover {
+        border-bottom: 1px solid lightgrey;
+
+        a{
+            color: grey;
+        }
+    }
+}
+
+.left-nav-contact {
+    padding-right: 30px;
+    font-size: 0.85rem;
+
+    i {
+        margin-right: 5px;
+    }
+
+    p {
+        padding: 6px 0;
+        color: #666666;
+    }
+    a {
+        color: #666666;
+    }
+}
+
+.left-nav-social {
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    .social-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(69, 47, 116);
+            color: white;
+        }
+    }
+    
+}

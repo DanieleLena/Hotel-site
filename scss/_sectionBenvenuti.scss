@@ -1,0 +1,164 @@
+@import "variables";
+
+.section-benvenuti {
+    width: 100%;
+    height: auto;
+    background-color: white;
+ 
+}
+//TOP, TITLE, PARAGRAPH =====================================================
+.benvenuti-top {
+    width: 100%;
+    height: 60vh;
+    padding: 5rem 8rem;
+    display: flex;
+}
+.benvenuti-leftP {
+    width: 40%;
+    height: 100%;
+    padding: 10px;
+    letter-spacing: 0.2em;
+
+
+    h2 {
+        font-family: $ovo;
+        font-size: 21px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+
+        &::after {
+            @include line;
+        }
+    }
+
+    h3 {
+        margin-top: 50px;
+        font-size: 13px;
+        line-height: 1.2rem;
+
+    }
+    p{
+        font-family: $ovo;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+.benvenuti-rightP {
+    width: 60%;
+    
+    h1 {
+        font-family: $yanone;
+        font-size: 38px;
+        line-height: 1.1em;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: $manjary;
+        line-height: 2rem;
+        font-size: 1rem;
+        column-count: 2;
+        column-width: 50px;
+        column-gap: 50px;
+        text-align: justify;
+    }
+}
+
+// BOTTOM, IMG, IMG:HOVER , CAMERE AND SUITS P ============================
+
+.benvenuti-bottom {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    position: relative;
+}
+
+.benvenuti-leftImg {
+    
+    width: 65%;
+    height: auto;
+    position: relative;
+    background-color: darkseagreen;
+    cursor: pointer;
+ 
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+}
+
+.cover-benvenuti {
+   width: 100%;
+    height: 100%;
+    background-color: rgba(21, 21, 65, 0.658);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition:  all .3s ease-in;
+    opacity: 0%;
+ 
+    span {
+        color: white;
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+    }
+}
+.benvenuti-leftImg:hover .cover-benvenuti {
+    
+ opacity: 100%;
+
+}
+
+
+.benvenuti-right-camere {
+    width: 35%;
+    padding: 10% 5%;
+    background-color: #f1f1f1;
+
+    h3 {
+        font-family: $ovo;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing:  0.2em;
+    }
+    h2 {
+        font-family: $yanone;
+        font-size: 40px;
+        letter-spacing: 0.4em;
+        font-weight: 300;
+        line-height: 3rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    p{
+        font-family: $raleway;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        line-height: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    a{
+        color: inherit;
+        border-bottom: solid;
+        border-bottom-style:dashed;
+        transition: all .2s linear;
+
+        &:hover {
+            padding: 0 30px;
+        }
+    }
+
+}
+
+
