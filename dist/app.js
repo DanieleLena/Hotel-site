@@ -7,7 +7,19 @@ const cover = document.querySelector(".cover");
 const btnX = document.querySelector(".fa-times");
 const body = document.getElementsByTagName("BODY")[0];
 
+
+const  mediaQuery = window.matchMedia("(max-width: 800px)");
+const mobileMenu = document.querySelector(".mobile-menu");
+
 btnMenu.addEventListener("click", function(){
+
+//MOBILE MENU
+
+    if (mediaQuery.matches){        
+        mobileMenu.classList.toggle("open-mobile-menu");
+    
+// DESKTOP MENU
+    }else { 
 
     leftNav.style.transitionDuration = `.8s`;
     landingPage.style.transition = ` .5s `;
@@ -17,7 +29,7 @@ btnMenu.addEventListener("click", function(){
     cover.classList.remove("hide-cover");
 
     body.style.overflow = `hidden`;
-        
+    }  
 });
 
 function closeLeftMenu(item) {
@@ -35,7 +47,5 @@ function closeLeftMenu(item) {
 
 closeLeftMenu(cover);
 closeLeftMenu(btnX);
-
-
 
 

@@ -9,7 +9,7 @@
 //TOP, TITLE, PARAGRAPH =====================================================
 .benvenuti-top {
     width: 100%;
-    height: 60vh;
+    height: auto;
     padding: 5rem 8rem;
     display: flex;
 }
@@ -71,7 +71,7 @@
 .benvenuti-bottom {
     background-color: #f1f1f1;
     width: 100%;
-    height: 90vh;
+    height: auto;
     display: flex;
     position: relative;
 }
@@ -81,7 +81,6 @@
     width: 65%;
     height: auto;
     position: relative;
-    background-color: darkseagreen;
     cursor: pointer;
  
     img {
@@ -91,29 +90,9 @@
 
 }
 
-.cover-benvenuti {
-   width: 100%;
-    height: 100%;
-    background-color: rgba(21, 21, 65, 0.658);
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    transition:  all .3s ease-in;
-    opacity: 0%;
- 
-    span {
-        color: white;
-        font-weight: 700;
-        font-size: 1rem;
-        letter-spacing: 0.4rem;
-        text-transform: uppercase;
-    }
-}
-.benvenuti-leftImg:hover .cover-benvenuti {
+
+.benvenuti-leftImg:hover .cover-img {
     
  opacity: 100%;
 
@@ -149,16 +128,59 @@
     }
 
     a{
-        color: inherit;
-        border-bottom: solid;
-        border-bottom-style:dashed;
-        transition: all .2s linear;
-
-        &:hover {
-            padding: 0 30px;
-        }
+       @include scopri-link;
     }
 
 }
 
 
+
+//============================================================================================================================
+//============================================ MEDIA QUERY ===================================================================
+//============================================================================================================================
+
+@media screen and(max-width: 800px) {
+
+    .section-benvenuti{
+      position: static;
+     padding: 25px 15px;
+
+    }
+
+    .benvenuti-top {
+        position: static;
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+
+    }
+    .benvenuti-leftP,.benvenuti-rightP {
+        margin-top:10px ;
+        width: 100%;
+        position: static;
+
+        p {
+            column-count: 1;
+
+        }
+        
+    }
+
+    .benvenuti-bottom {
+        position: static;
+
+        margin-top:  20px;
+        flex-direction: column;
+    }
+
+    .benvenuti-leftImg {
+        width: 100%;
+    }
+    .benvenuti-right-camere {
+        width: 100%;
+      
+    }
+
+
+
+}

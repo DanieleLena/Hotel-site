@@ -1,0 +1,112 @@
+@import "variables";
+
+.section-eatDrinks{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.eatDrinks {
+    width: 50%;
+}
+.position {
+    width: 50%;
+}
+
+.eatDrinks-top, .position-top {
+
+    width: 100%;    
+    justify-content: center;
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 1px;
+    }
+
+}
+
+.position-img {
+    position: relative;
+
+&:hover .cover-img {
+    opacity: 100%;
+}
+}
+.eatDrinks-img {
+    position: relative;
+
+&:hover .cover-img{
+    opacity: 100%;
+}
+}
+
+
+.eatDrinks-bottom,.position-bottom {
+    width: 100%;
+    background-color: white;
+
+    h3 {
+        font-family: $ovo;
+        font-size: 32px;
+        font-weight: 400;
+        letter-spacing: .2rem;
+    }
+    h4 {
+        font-family: $manjary;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: .2rem;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+}
+
+.eatDrinks-leftP, .position-bottom {
+    padding: 50px;
+
+    p{
+        @include standard-p;
+    }
+
+    a {
+        @include scopri-link;
+    }
+}
+
+//============================================================================================================================
+//============================================ MEDIA QUERY ===================================================================
+//============================================================================================================================
+
+@media screen and(max-width: 800px) {
+
+    .section-eatDrinks {
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+    }
+    .eatDrinks {
+        width: 100%;
+    }
+    .position {
+        width: 100%;
+    
+       
+    }
+    
+    .eatDrinks-leftP, .position-bottom {
+        padding: 15px 15px;
+    
+        p{
+            @include mobile-p;
+        }
+    
+        a {
+            @include scopri-link;
+        }
+    }
+
+}
+
+

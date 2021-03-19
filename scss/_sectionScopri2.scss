@@ -35,3 +35,47 @@
 
     }
 }
+
+//============================================================================================================================
+//============================================ MEDIA QUERY ===================================================================
+//============================================================================================================================
+
+@media screen and(max-width: 800px) {
+
+.section-scopri {
+    height: auto;
+    position: static;
+    display:flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    h2 {
+        font-family: $ovo;
+        font-size: 21px;
+        font-weight: 200;
+        line-height: 3rem;
+
+    }
+    h1 {
+        font-family: $yanone;
+        font-size: 38px;
+        font-weight: 200;
+        line-height: 2rem;
+        letter-spacing: 0.2rem;
+
+        &::after {
+            @include line;
+            height: 30px;
+        }
+    }
+
+    p {
+        margin-top: 30px;
+        columns: 1;
+
+        @include mobile-p;
+        
+
+    }
+}
+    
+}
